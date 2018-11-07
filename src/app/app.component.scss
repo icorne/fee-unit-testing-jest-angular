@@ -1,0 +1,23 @@
+.navbar.navbar-light.bg-light {
+  background-color: orange !important;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.language {
+  span {
+    color: white;
+    font-weight: bold;
+    padding-right: 20px;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+}

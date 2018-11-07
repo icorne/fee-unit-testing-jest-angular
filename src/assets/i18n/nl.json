@@ -1,0 +1,18 @@
+{
+	"ALLBOOKS": "Alle boeken",
+	"ADMIN": "Admin",
+	"AMOUNTOFPAGES": "Aantal pagina's",
+	"AUTHOR": "Auteur",
+	"BORROWBOOK": "Leen",
+	"BORROWED": "Geleend",
+	"CHECKED_OUT": "Je hebt het boek {{title}} van {{author}} geleend",
+	"ERROR": "Fout!",
+	"HANDED_IN": "Je hebt het boek {{title}} van {{author}} ingeleverd",
+	"HANDIN": "Inleveren",
+	"ISBN": "ISBN",
+	"MYBOOKS": "Mijn boeken",
+	"RELEASEDATE": "Uitgave datum",
+	"SOMETHING_WENT_WRONG": "Er ging iets mis: {{message}}",
+	"SUCCESS": "Gelukt!",
+	"TITLE": "Titel"
+}

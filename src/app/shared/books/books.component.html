@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-lg-12" *ngIf="books?.length > 0">
+    <mat-card>
+      <table class="table">
+        <thead class="custom-style-thead">
+        <tr>
+          <th scope="col">{{ 'TITLE' | translate }}</th>
+          <th scope="col">{{ 'AUTHOR' | translate }}</th>
+          <th scope="col">{{ 'ISBN' | translate }}</th>
+          <th scope="col">{{ 'AMOUNTOFPAGES' | translate }}</th>
+          <th scope="col">{{ 'RELEASEDATE' | translate }}</th>
+          <th scope="col">{{ 'BORROWED' | translate }}</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let book of books">
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.isbn }}</td>
+          <td>{{ book.amountOfPages }}</td>
+          <td>{{ book.releaseDate | date }}</td>
+          <td>{{ book.borrowed }}</td>
+          <td class="align-right">
+            <button mat-raised-button color="primary" (click)="bookClicked(book)">{{actionLabel}}</button>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </mat-card>
+  </div>
+
+  <div class="col-lg-12" *ngIf="books?.length <= 0">
+    <mat-card>
+      No books available!
+    </mat-card>
+  </div>
+</div>

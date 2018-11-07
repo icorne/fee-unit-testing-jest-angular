@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <span class="navbar-brand mb-0 h1"><i class="fa fa-book"></i> lAEbrary</span>
+  <div class="navigation">
+    <a [routerLink]="['my-books']">{{ 'MYBOOKS' | translate }}</a>
+    <a [routerLink]="['all-books']">{{ 'ALLBOOKS' | translate }}</a>
+    <a [routerLink]="['admin']">{{ 'ADMIN' | translate }}</a>
+  </div>
+  <div class="language">
+    <span *ngIf="isNotCurrentLang('nl')" (click)="changeLang('nl')">NL</span>
+    <span *ngIf="isNotCurrentLang('en')" (click)="changeLang('en')">EN</span>
+  </div>
+</nav>
+
+<div class="container mt-lg-5">
+  <router-outlet></router-outlet>
+</div>

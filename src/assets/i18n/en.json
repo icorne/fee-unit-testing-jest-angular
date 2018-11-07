@@ -1,0 +1,18 @@
+{
+  "ALLBOOKS": "All Books",
+  "ADMIN": "Admin",
+  "AMOUNTOFPAGES": "Amount of Pages",
+  "AUTHOR": "Author",
+  "BORROWBOOK": "Borrow",
+  "BORROWED": "Borrowed",
+  "CHECKED_OUT": "You checked out the book {{title}} by {{author}}",
+  "ERROR": "Error!",
+  "HANDED_IN": "You handed in the book {{title}} by {{author}}",
+  "HANDIN": "Hand in",
+  "ISBN": "ISBN",
+  "MYBOOKS": "My Books",
+  "RELEASEDATE": "Release Date",
+  "SOMETHING_WENT_WRONG": "Something went wrong: {{message}}",
+  "SUCCESS": "Success!",
+  "TITLE": "Title"
+}

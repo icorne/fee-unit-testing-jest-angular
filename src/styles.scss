@@ -1,0 +1,29 @@
+@import "variables";
+@import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
+@import "~ngx-toastr/toastr.css";
+
+// Angular material custom theme
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+// Define the theme.
+$laebrary-primary: mat-palette($mat-blue-grey);
+$laebrary-accent:  mat-palette($mat-gray, A200, A100, A400);
+$laebrary-theme:   mat-light-theme($laebrary-primary, $laebrary-accent);
+
+// Include the theme styles for only specified components.
+@include mat-core-theme($laebrary-theme);
+@include mat-button-theme($laebrary-theme);
+@include mat-checkbox-theme($laebrary-theme);
+
+// Google fonts custom font
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*:not(.fa) {
+  font-family: 'Montserrat', sans-serif;
+}

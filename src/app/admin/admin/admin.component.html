@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-12">
+    <form [formGroup]="form">
+      <div>
+        <label>Title: <input type="text" placeholder="Input" [formControlName]="'title'" [formGroup]="form"></label>
+        <label>Title: <input type="text" placeholder="Input" [formControlName]="'title2'" [formGroup]="form"></label>
+      </div>
+      <div [formGroup]="subForm">
+        <label>Author: <input type="text" placeholder="Input" [formControlName]="'author'"
+                              [formGroup]="subForm"></label>
+        <label>ISBN: <input type="text" placeholder="Input" [formControlName]="'isbn'" [formGroup]="subForm"></label>
+      </div>
+      <div [formGroup]="subSubForm">
+        <label>Amount of Pages: <input type="text" placeholder="Input" [formControlName]="'amountOfPages'"
+                                       [formGroup]="subSubForm"></label>
+      </div>
+    </form>
+  </div>
+</div>
