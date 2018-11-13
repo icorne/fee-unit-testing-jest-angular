@@ -47,7 +47,7 @@ statement of exercise 1.2 with a new one that makes sense.
 Located under `./src/app/basic-exercises/exercise-2` is the next exercise. Another boring counter, but this time with an external
 dependency and asynchronous behaviour. We will make use of some angular core functionality in these exercises. Make sure to read [Angular Testing]((https://angular.io/guide/testing)) when getting stuck.
 
-## 2.1
+### 2.1
 Similar to exercise **1.1**, write a test that verifies that a new Counter instance is initialised with a count
 of zero. Make sure you read the Jasmine docs about [fakeAsync](https://angular.io/api/core/testing/fakeAsync#description), [flush](https://angular.io/api/core/testing/flush)
 and [spy's](http://tobyho.com/2011/12/15/jasmine-spy-cheatsheet/).
@@ -60,47 +60,44 @@ Let us now write an individual test for each of the following statements:
 - SpyOn/Mock the message service and check if it returns the mocked message + if the message service got called.
 - Do not spy, mock or stub the message service and check if 'HELLO WORLD' is set as message by the message service during increasing of the counter.
 
-## 2.2
-For those freewheeling, try to solve the SpyOn/Mock of the message service exercise with marble testing [Marble Testing](https://angular.io/guide/testing) in the marble testing section.
-
-
-## Karma/Jasmine testing in an Angular Framework
+## 3 Karma/Jasmine testing in an Angular Framework
 Again make sure to read [Angular Testing]((https://angular.io/guide/testing)) when getting stuck. 
 The difficulty of the tests will grow gradually and testing certain parts will cover other parts as well. Testing edge cases will be important!
-At the end of day we want to reach at least **100% code coverage** for the whole application.
 
 Put all stubs that you create in the `./src/app/shared/stubs` folder.
 
 **Good Luck!!**
 
-## Pipes
+### 3.1 Pipes
 Starting with the most easy exercise for the Angular Framework unit tests, pipes!
 You can find the exercise in `./src/app/shared/pipes`.
 
-## Services
+### 3.2 Services
 Next some very important tests in an Angular Application, services. You will have to use spying, mocking and stubbing for these tests.
 **Tip:** The http-client is already stubbed, you can find it in `./src/app/shared/stubs/http-client.service.stub.ts`.
 You can find the exercises in `./src/app/shared/services`. Test every service completely.
 
-## Components
+### 3.3 Components
 Test every component in this application except for the **Admin and App Components**. Again you will need, spying, mocking and stubbing while dealing with async code as well.
 I suggest to test every component with and without the default generated TestBed configuration to see the difference and to learn both ways of testing. 
-In `./src/app/shared/monkey-patch.component.spec.ts` you can find some monkey patching code for running TestBed much faster.
 In `./src/app/shared/example.component.spec.ts` you can find a default generated setup (including getting services for spying and mocking).
 
 When the test complains about not knowing elements in the dom, you will have to add schemas: [CUSTOM_ELEMENTS_SCHEMAS] in the TestBed config.
 This ensures that the not known elements will be stubbed (complete isolation tests).
 
 
-## Admin Component
+## 4. Admin Component
 In this component you will have to test the form and the sub forms (reactive forms are used in this case). 
 This includes testing the changes, what happens when the form changes and in which cases the form should be valid or not. 
 
 **Tip:** Make sure to import ReactiveFormsModule and add the FormBuilder in the providers.
 
-## App component
-Not so very different from the above tested components. However....
+### 2.2 (extra)
+For those freewheeling, try to solve the SpyOn/Mock of the message service exercise with marble testing [Marble Testing](https://angular.io/guide/testing) in the marble testing section.
 
 ## Interceptors
 A little more advanced testing and mocking skills needed for this one.
 You can find the exercise in `./src/app/shared/interceptors`.
+
+## App component
+Not so very different from the above tested components. However....
