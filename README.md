@@ -60,7 +60,8 @@ Let us now write an individual test for each of the following statements:
 - SpyOn/Mock the message service and check if it returns the mocked message + if the message service got called.
 - Do not spy, mock or stub the message service and check if 'HELLO WORLD' is set as message by the message service during increasing of the counter.
 
-## 3 Karma/Jasmine testing in an Angular Framework
+## Exercise 3 
+### Karma/Jasmine testing in an Angular Framework
 Again make sure to read [Angular Testing]((https://angular.io/guide/testing)) when getting stuck. 
 The difficulty of the tests will grow gradually and testing certain parts will cover other parts as well. Testing edge cases will be important!
 
@@ -74,8 +75,9 @@ You can find the exercise in `./src/app/shared/pipes`.
 
 ### 3.2 Services
 Next some very important tests in an Angular Application, services. You will have to use spying, mocking and stubbing for these tests.
+
 **Tip:** The http-client is already stubbed, you can find it in `./src/app/shared/stubs/http-client.service.stub.ts`.
-You can find the exercises in `./src/app/shared/services`. Test every service completely.
+You can find the exercises in `./src/app/shared/services`.
 
 ### 3.3 Components
 Test every component in this application except for the **Admin and App Components**. Again you will need, spying, mocking and stubbing while dealing with async code as well.
@@ -86,18 +88,17 @@ When the test complains about not knowing elements in the dom, you will have to 
 This ensures that the not known elements will be stubbed (complete isolation tests).
 
 
-## 4. Admin Component
+## Exercise 4
+### Admin Component
 In this component you will have to test the form and the sub forms (reactive forms are used in this case). 
 This includes testing the changes, what happens when the form changes and in which cases the form should be valid or not. 
 
-**Tip:** Make sure to import ReactiveFormsModule and add the FormBuilder in the providers.
+**Tip:** Make sure to import ReactiveFormsModule and add the FormBuilder to the providers.
 
-### 2.2 (extra)
+## Extra's
+## In exercise 2.2
 For those freewheeling, try to solve the SpyOn/Mock of the message service exercise with marble testing [Marble Testing](https://angular.io/guide/testing) in the marble testing section.
 
 ## Interceptors
 A little more advanced testing and mocking skills needed for this one.
 You can find the exercise in `./src/app/shared/interceptors`.
-
-## App component
-Not so very different from the above tested components. However....
