@@ -65,7 +65,7 @@ Let us now write an individual test for each of the following statements:
 Again make sure to read [Angular Testing]((https://angular.io/guide/testing)) when getting stuck. 
 The difficulty of the tests will grow gradually and testing certain parts will cover other parts as well. Testing edge cases will be important!
 
-Put all stubs that you create in the `./src/app/shared/stubs` folder.
+Put all stubs that you create in the `./stubs` folder.
 
 **Good Luck!!**
 
@@ -76,7 +76,7 @@ You can find the exercise in `./src/app/shared/pipes`.
 ### 3.2 Services
 Next some very important tests in an Angular Application, services. You will have to use spying, mocking and stubbing for these tests.
 
-**Tip:** The http-client is already stubbed, you can find it in `./src/app/shared/stubs/http-client.service.stub.ts`.
+**Tip:** The http-client is already stubbed, you can find it in `./stubs/http-client.service.stub.ts`.
 You can find the exercises in `./src/app/shared/services`.
 
 ### 3.3 Components
@@ -94,6 +94,38 @@ In this component you will have to test the form and the sub forms (reactive for
 This includes testing the changes, what happens when the form changes and in which cases the form should be valid or not. 
 
 **Tip:** Make sure to import ReactiveFormsModule and add the FormBuilder to the providers.
+
+## Exercise 5
+Let's create a book recommendation system, an exercise for two people. One person creates the tests and the other one
+the implementation for exercise 5.1, switch roles in exercise 5.2. Before starting, first agree on a contract that
+should be implemented and can be used to write tests against.
+
+### 5.1
+Calculate similarity score given two books. You can decide yourselves how you would calculate the similarity.
+Here are some ideas:
+- Levenshtein distance on book title, author, description, ...
+- Number of similar words occurring in the book title's
+- Date of publishing
+- ...
+
+The final contract you agree on should be something like the following function signature:
+```javascript
+// Book type := {
+//     id: number,
+//     title: string,
+//     author: string,
+//     ...
+// }
+function calculateSimilarityScore(bookA, bookB) {
+    // return a number from 0 to 1
+}
+```
+But make sure to also define smaller sub-contracts, for example calculating the similarity for two plain strings.
+
+
+### 5.2
+Now switch roles. We will now be extending from 5.1, this time we would like to be able to get the N most similar books
+given a specific book and a collection of books to choose from. Don't forget to first specify a contract! 
 
 ## Extra's
 ## In exercise 2.2

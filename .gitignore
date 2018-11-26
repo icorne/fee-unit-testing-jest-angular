@@ -50,5 +50,6 @@ Thumbs.db
 
 /src/app/**/*.js
 /src/app/**/*.js.map
-test-reports/
+/test-reports/
+/coverage/
 !version.js
