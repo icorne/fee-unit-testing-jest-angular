@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {HttpClient} from '@angular/common/http';
-import {of} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
 
-import {HttpClientStub} from '../../../stubs/http-client.stub';
+import { HttpClientStub } from '../../../stubs/http-client.stub';
 
 describe('ExampleComponent', () => {
   let component: ExampleComponent;

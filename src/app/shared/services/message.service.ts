@@ -6,13 +6,14 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class MessageService {
 
-  constructor(private toastr: ToastrService) { }
+  constructor(private toastr: ToastrService) {
+  }
 
-    showErrorMessage(title: string, message: string) {
-      this.toastr.error(message, title);
-    }
+  showErrorMessage(title: string, message: string) {
+    this.toastr.error(message, title);
+  }
 
-    showSuccessMessage(title: string, message: string) {
-      this.toastr.success(message, title);
-    }
+  showSuccessMessage(title: string, message: string) {
+    this.toastr.success(message, title);
+  }
 }

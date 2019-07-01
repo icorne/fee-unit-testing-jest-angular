@@ -1,7 +1,8 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AllBooksComponent } from './all-books/all-books.component';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+
 import { SharedModule } from '../shared/shared.module';
+import { AllBooksComponent } from './all-books/all-books.component';
 
 @NgModule({
   imports: [
@@ -14,4 +15,5 @@ import { SharedModule } from '../shared/shared.module';
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })
-export class AllBooksModule { }
+export class AllBooksModule {
+}

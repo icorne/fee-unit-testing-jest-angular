@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {LanguageService} from './shared/services/language.service';
+import { Component } from '@angular/core';
+import { LanguageService } from './shared/services/language.service';
 
 @Component({
   selector: 'fee2018-root',
@@ -10,7 +10,6 @@ export class AppComponent {
   title = 'app';
 
   constructor(public languageService: LanguageService) {
-
   }
 
   changeLang(lang: string): void {

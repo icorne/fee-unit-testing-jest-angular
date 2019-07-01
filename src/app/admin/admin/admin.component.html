@@ -6,13 +6,11 @@
         <label>Title: <input type="text" placeholder="Input" [formControlName]="'title2'" [formGroup]="form"></label>
       </div>
       <div [formGroup]="subForm">
-        <label>Author: <input type="text" placeholder="Input" [formControlName]="'author'"
-                              [formGroup]="subForm"></label>
-        <label>ISBN: <input type="text" placeholder="Input" [formControlName]="'isbn'" [formGroup]="subForm"></label>
+        <label>Author: <input type="text" placeholder="Input" [formControlName]="'author'"></label>
+        <label>ISBN: <input type="text" placeholder="Input" [formControlName]="'isbn'"></label>
       </div>
       <div [formGroup]="subSubForm">
-        <label>Amount of Pages: <input type="text" placeholder="Input" [formControlName]="'amountOfPages'"
-                                       [formGroup]="subSubForm"></label>
+        <label>Amount of Pages: <input type="text" placeholder="Input" [formControlName]="'amountOfPages'"></label>
       </div>
     </form>
   </div>

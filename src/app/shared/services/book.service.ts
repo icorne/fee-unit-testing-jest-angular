@@ -1,7 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Book} from '../domain/book.model';
-import {HttpClient, HttpParams} from '@angular/common/http';
-import {Observable} from 'rxjs/internal/Observable';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+
+import { Book } from '../domain/book.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class BookService {
 
   getMyBooks(): Observable<Book[]> {
     const params = new HttpParams().set('borrowed', 'true');
-    return this.httpClient.get<Book[]>('http://localhost:3001/books', {params: params});
+    return this.httpClient.get<Book[]>('http://localhost:3001/books', {params});
   }
 
   borrowBook(book: Book): Observable<Book> {

@@ -1,5 +1,6 @@
-import {Observable, of} from 'rxjs';
-import {Book} from '../domain/book.model';
+import { Observable, of } from 'rxjs';
+
+import { Book } from '../src/app/shared/domain/book.model';
 
 export class BookServiceStub {
 

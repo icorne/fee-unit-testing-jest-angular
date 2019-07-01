@@ -1,12 +1,14 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule, MatCardModule } from '@angular/material';
+import { TranslateModule } from '@ngx-translate/core';
+
 import { BooksComponent } from './books/books.component';
 import { BookService } from './services/book.service';
-import { MatButtonModule, MatCardModule } from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
-import { MessageService } from './services/message.service';
 import { LanguageService } from './services/language.service';
-import { TranslateModule } from '@ngx-translate/core';
+import { MessageService } from './services/message.service';
 
 @NgModule({
   imports: [
@@ -14,12 +16,16 @@ import { TranslateModule } from '@ngx-translate/core';
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule
   ],
   declarations: [BooksComponent],
   exports: [
-    BooksComponent,
-    TranslateModule
+    MatCardModule,
+    MatButtonModule,
+    TranslateModule,
+    ReactiveFormsModule,
+    BooksComponent
   ]
 })
 export class SharedModule {
@@ -35,5 +41,3 @@ export class SharedModule {
     };
   }
 }
-
-

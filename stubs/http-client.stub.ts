@@ -1,6 +1,7 @@
-import {Observable, of} from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 export class HttpClientStub {
+
   public get<T>(searchUrl: string, searchParam: any): Observable<T> {
     return of({} as T);
   }

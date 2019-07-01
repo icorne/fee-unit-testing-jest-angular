@@ -80,9 +80,6 @@
             "styles": [
               "src/styles.scss"
             ],
-            "codeCoverageExclude": [
-              "src/app/shared/stubs/*"
-            ],
             "scripts": [],
             "assets": [
               "src/favicon.ico",
