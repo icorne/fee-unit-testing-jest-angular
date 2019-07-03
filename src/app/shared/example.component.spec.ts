@@ -45,7 +45,7 @@ describe('ExampleComponent', () => {
 });
 
 @Component({
-  selector: 'fee2018-example',
+  selector: 'fee2019-example',
   template: ''
 })
 class ExampleComponent implements OnInit {

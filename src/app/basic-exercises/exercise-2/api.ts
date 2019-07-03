@@ -1,12 +1,9 @@
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 export class Api {
 
   getMessage(): Observable<string> {
-    return new Observable<string>(observer => {
-      setTimeout(() => {
-        observer.next('HELLO WORLD');
-      }, 2000);
-    });
+    return of('HELLO WORLD').pipe(delay(2000));
   }
 }

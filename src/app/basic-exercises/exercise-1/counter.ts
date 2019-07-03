@@ -1,20 +1,20 @@
 export class Counter {
 
-  private counter = 0;
+  private _counter = 0;
+
+  get counter(): number {
+    return this._counter;
+  }
 
   increase(): void {
-    this.counter++;
+    this._counter++;
   }
 
   decrease(): void {
-    this.counter--;
+    this._counter--;
   }
 
   reset(): void {
-    this.counter = 0;
-  }
-
-  getCounter(): number {
-    return this.counter;
+    this._counter = 0;
   }
 }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { LanguageService } from './shared/services/language.service';
 
 @Component({
-  selector: 'fee2018-root',
+  selector: 'fee2019-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

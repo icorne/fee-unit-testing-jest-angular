@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "fee2018",
+            "fee2019",
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "fee2018",
+            "fee2019",
             "kebab-case"
         ]
     }

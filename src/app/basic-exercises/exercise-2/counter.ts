@@ -2,7 +2,7 @@ import { Api } from './api';
 
 export class Counter {
 
-  private counter = 0;
+  private _counter = 0;
   private _message: string;
 
   constructor(private api: Api) {
@@ -17,21 +17,20 @@ export class Counter {
   }
 
   increase(): void {
-    this.counter++;
-    this.api.getMessage().subscribe((message: string) => {
-      this.message = message;
-    });
+    this._counter++;
+    this.api.getMessage()
+      .subscribe((message: string) => this.message = message);
   }
 
   decrease(): void {
-    this.counter = this.counter === 0 ? 0 : this.counter - 1;
+    this._counter = this._counter === 0 ? 0 : this._counter - 1;
   }
 
   reset(): void {
-    this.counter = 0;
+    this._counter = 0;
   }
 
-  getCounter(): number {
-    return this.counter;
+  get counter(): number {
+    return this._counter;
   }
 }

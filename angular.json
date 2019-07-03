@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FEE2018": {
+    "FEE2019": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "fee2018",
+      "prefix": "fee2019",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FEE2018",
+            "outputPath": "dist/FEE2019",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FEE2018:build"
+            "browserTarget": "FEE2019:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FEE2018:build:production"
+              "browserTarget": "FEE2019:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FEE2018:build"
+            "browserTarget": "FEE2019:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         }
       }
     },
-    "FEE2018-e2e": {
+    "FEE2019-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -109,7 +109,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "FEE2018:serve"
+            "devServerTarget": "FEE2019:serve"
           }
         },
         "lint": {
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "FEE2018"
+  "defaultProject": "FEE2019"
 }

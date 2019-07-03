@@ -6,18 +6,20 @@ import { BookService } from '../../shared/services/book.service';
 import { MessageService } from '../../shared/services/message.service';
 
 @Component({
-  selector: 'fee2018-all-books',
+  selector: 'fee2019-all-books',
   templateUrl: './all-books.component.html',
   styleUrls: ['./all-books.component.scss']
 })
 export class AllBooksComponent implements OnInit {
 
-  books: Book[];
+  books: Book[] = [];
 
-  constructor(private bookService: BookService, private messageService: MessageService, private translateService: TranslateService) {
+  constructor(private bookService: BookService,
+              private messageService: MessageService,
+              private translateService: TranslateService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.bookService.getAllBooks()
       .subscribe(list => this.books = list);
   }
