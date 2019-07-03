@@ -63,6 +63,8 @@ Let us now write an individual test for each of the following statements:
 
 ## Exercise 3 
 ### Karma/Jasmine testing in an Angular Framework
+Every components has 2 spec files. The first one is meant to use the Angular and TestBed configuration. 
+The second one is for testing the component excluding the Angular and TestBed configuration.
 Again make sure to read [Angular Testing]((https://angular.io/guide/testing)) when getting stuck. 
 The difficulty of the tests will grow gradually and testing certain parts will cover other parts as well. Testing edge cases will be important!
 
