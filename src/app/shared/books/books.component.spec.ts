@@ -1,26 +1,47 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {TestBed} from "@angular/core/testing";
+import {BooksComponent} from "./books.component";
+import {CUSTOM_ELEMENTS_SCHEMA, Pipe} from "@angular/core";
 
-import { BooksComponent } from './books.component';
+describe('Books Component', () => {
 
-describe('BooksComponent', () => {
-  let component: BooksComponent;
-  let fixture: ComponentFixture<BooksComponent>;
+    it('renders empty list', async () => {
+        await TestBed.configureTestingModule({
+            declarations: [BooksComponent, StubbedTranslatePipe],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        }).compileComponents();
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [BooksComponent],
-      schemas: [],
-    })
-      .compileComponents();
-  }));
+        const fixture = TestBed.createComponent(BooksComponent);
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(BooksComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        expect(fixture).toMatchSnapshot();
+    });
 
-  it('should create the BooksComponent', () => {
-    expect(component).toBeTruthy();
-  });
+    it('renders single item list', async () => {
+        await TestBed.configureTestingModule({
+            declarations: [BooksComponent, StubbedTranslatePipe],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        }).compileComponents();
+
+        const fixture = TestBed.createComponent(BooksComponent);
+
+        fixture.componentInstance.books = [{
+            id: 42,
+            title: 'The Hitchiker\'s guide to the galaxy',
+            description: 'Sci-fi absurdism',
+            author: 'Douglas Adams',
+            isbn: 'book-42',
+            amountOfPages: 42,
+            releaseDate: new Date(),
+            borrowed: true
+        }];
+
+        fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
+
 });
+
+@Pipe({name: 'translate'})
+class StubbedTranslatePipe {
+    transform(x) {return x;}
+}

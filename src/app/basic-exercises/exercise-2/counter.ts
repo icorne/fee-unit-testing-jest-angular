@@ -1,4 +1,4 @@
-import { Api } from './api';
+import {Api} from './api';
 
 export class Counter {
 
@@ -8,29 +8,24 @@ export class Counter {
   constructor(private api: Api) {
   }
 
-  set message(message: string) {
-    this._message = message;
-  }
-
-  get message(): string {
+  async getMessage(): Promise<string> {
     return this._message;
   }
 
-  increase(): void {
+  async increase(): Promise<void> {
     this._counter++;
-    this.api.getMessage()
-      .subscribe((message: string) => this.message = message);
+    this._message = await this.api.getMessage().toPromise();
   }
 
-  decrease(): void {
+  async decrease(): Promise<void> {
     this._counter = this._counter === 0 ? 0 : this._counter - 1;
   }
 
-  reset(): void {
+  async reset(): Promise<void> {
     this._counter = 0;
   }
 
-  get counter(): number {
+  async getCounter(): Promise<number> {
     return this._counter;
   }
 }

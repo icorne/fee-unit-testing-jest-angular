@@ -2,7 +2,7 @@ export class Counter {
 
   private _counter = 0;
 
-  get counter(): number {
+  getCounter(): number {
     return this._counter;
   }
 

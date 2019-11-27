@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Books Component renders empty list 1`] = `
+<fee2019-books
+  books={[Function Array]}
+  clicked={[Function EventEmitter]}
+>
+  <div
+    class="row"
+  >
+    
+    
+  </div>
+</fee2019-books>
+`;
+
+exports[`Books Component renders single item list 1`] = `
+<fee2019-books
+  books={[Function Array]}
+  clicked={[Function EventEmitter]}
+>
+  <div
+    class="row"
+  >
+    
+    <div
+      class="col-lg-12"
+    >
+      <mat-card>
+        <table
+          class="table"
+        >
+          <thead
+            class="custom-style-thead"
+          >
+            <tr>
+              <th
+                scope="col"
+              >
+                TITLE
+              </th>
+              <th
+                scope="col"
+              >
+                AUTHOR
+              </th>
+              <th
+                scope="col"
+              >
+                ISBN
+              </th>
+              <th
+                scope="col"
+              >
+                AMOUNTOFPAGES
+              </th>
+              <th
+                scope="col"
+              >
+                RELEASEDATE
+              </th>
+              <th
+                scope="col"
+              >
+                BORROWED
+              </th>
+              <th
+                scope="col"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>
+                The Hitchiker's guide to the galaxy
+              </td>
+              <td>
+                Douglas Adams
+              </td>
+              <td>
+                book-42
+              </td>
+              <td>
+                42
+              </td>
+              <td>
+                Nov 27, 2019
+              </td>
+              <td>
+                true
+              </td>
+              <td
+                class="align-right"
+              >
+                <button
+                  color="primary"
+                  mat-raised-button=""
+                >
+                  
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card>
+    </div>
+    
+  </div>
+</fee2019-books>
+`;

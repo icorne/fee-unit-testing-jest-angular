@@ -1,9 +1,12 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HttpClientStub } from '../../../stubs/http-client.stub';
+class MockedHttpClient {
+  constructor() {}
+
+  public get = jest.fn();
+}
 
 describe('ExampleComponent', () => {
   let component: ExampleComponent;
@@ -12,8 +15,8 @@ describe('ExampleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ExampleComponent],
-      schemas: [],
-      providers: [{provide: HttpClient, useClass: HttpClientStub}],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [{provide: HttpClient, useClass: MockedHttpClient}],
       imports: []
     })
       .compileComponents();
@@ -34,7 +37,6 @@ describe('ExampleComponent', () => {
     // ARRANGE
     // TestBed provides getter for services
     const mockedHttpClient = TestBed.get(HttpClient);
-    spyOn(mockedHttpClient, 'get').and.returnValue(of([]));
 
     // ACT
     component.ngOnInit();
