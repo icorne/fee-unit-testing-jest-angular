@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyBooksComponent  IT does not change 1`] = `
+<fee2019-my-books
+  bookList={[Function Array]}
+  bookService={[Function Object]}
+  messageService={[Function Object]}
+  translateService={[Function Object]}
+>
+  <fee2019-books />
+</fee2019-my-books>
+`;
+
+exports[`MyBooksComponent IT does not change 1`] = `
+<fee2019-my-books
+  bookList={[Function Array]}
+  bookService={[Function Object]}
+  messageService={[Function Object]}
+  translateService={[Function Object]}
+>
+  <fee2019-books />
+</fee2019-my-books>
+`;
