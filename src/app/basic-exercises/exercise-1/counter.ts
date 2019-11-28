@@ -11,7 +11,7 @@ export class Counter {
   }
 
   decrease(): void {
-    this._counter--;
+    this._counter = Math.max(this._counter - 1 , 0);
   }
 
   reset(): void {
